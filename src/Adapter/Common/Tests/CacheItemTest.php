@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of php-cache\adapter-common package.
+ * This file is part of php-cache organization.
  *
  * (c) 2015-2015 Aaron Scherer <aequasi@gmail.com>, Tobias Nyholm <tobias.nyholm@gmail.com>
  *
@@ -67,13 +67,13 @@ class CacheItemTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($item->isHit());
 
         $closure = function () {
-            return [true, 'value'];
+            return [true, 'value', []];
         };
         $item = new CacheItem('test_key', $closure);
         $this->assertTrue($item->isHit());
 
         $closure = function () {
-            return [false, null];
+            return [false, null, []];
         };
         $item = new CacheItem('test_key', $closure);
         $this->assertFalse($item->isHit());

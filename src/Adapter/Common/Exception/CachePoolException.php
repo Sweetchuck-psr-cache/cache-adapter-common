@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of php-cache\adapter-common package.
+ * This file is part of php-cache organization.
  *
  * (c) 2015-2015 Aaron Scherer <aequasi@gmail.com>, Tobias Nyholm <tobias.nyholm@gmail.com>
  *
@@ -11,6 +11,11 @@
 
 namespace Cache\Adapter\Common\Exception;
 
-class InvalidArgumentException extends \InvalidArgumentException implements \Psr\Cache\InvalidArgumentException
+/**
+ * If an exception is caused by a pool or by the cache storage.
+ *
+ * @author Tobias Nyholm <tobias.nyholm@gmail.com>
+ */
+class CachePoolException extends CacheException
 {
 }
