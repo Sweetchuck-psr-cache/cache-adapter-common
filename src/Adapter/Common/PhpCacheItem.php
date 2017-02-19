@@ -9,15 +9,19 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Adapter\Common\Exception;
+namespace Cache\Adapter\Common;
 
-use Psr\Cache\CacheException as CacheExceptionInterface;
+use Cache\TagInterop\TaggableCacheItemInterface;
 
 /**
- * A base exception. All exceptions in this organization will extend this exception.
- *
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>
  */
-abstract class CacheException extends \RuntimeException implements CacheExceptionInterface
+interface PhpCacheItem extends HasExpirationTimestampInterface, TaggableCacheItemInterface
 {
+    /**
+     * Get the current tags. These are not the same tags as getPrevious tags.
+     *
+     * @return array
+     */
+    public function getTags();
 }
