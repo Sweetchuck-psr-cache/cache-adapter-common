@@ -12,7 +12,7 @@ declare(strict_types = 1);
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Adapter\Common\Tests;
+namespace Cache\Adapter\Common\Tests\Acceptance;
 
 use Cache\Adapter\Common\CacheItem;
 use PHPUnit\Framework\TestCase;
