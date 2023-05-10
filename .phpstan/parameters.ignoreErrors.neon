@@ -1,0 +1,31 @@
+parameters:
+    ignoreErrors:
+        -
+            message: "#^Call to an undefined method Cache\\\\TagInterop\\\\TaggableCacheItemInterface\\:\\:moveTagsToPrevious\\(\\)\\.$#"
+            count: 1
+            path: ../src/AbstractCachePool.php
+
+        -
+            message: "#^Method Cache\\\\Adapter\\\\Common\\\\AbstractCachePool\\:\\:getItem\\(\\) should return Cache\\\\Adapter\\\\Common\\\\PhpCacheItem but returns Cache\\\\TagInterop\\\\TaggableCacheItemInterface\\.$#"
+            count: 1
+            path: ../src/AbstractCachePool.php
+
+        -
+            message: "#^Else branch is unreachable because ternary operator condition is always true\\.$#"
+            count: 1
+            path: ../src/CacheItem.php
+
+        -
+            message: "#^Method Cache\\\\Adapter\\\\Common\\\\PhpCachePool\\:\\:getItems\\(\\) has invalid return type iterable\\.$#"
+            count: 1
+            path: ../src/PhpCachePool.php
+
+        -
+            message: "#^Method Cache\\\\Adapter\\\\Common\\\\PhpCachePool\\:\\:getItems\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+            count: 1
+            path: ../src/PhpCachePool.php
+
+        -
+            message: "#^PHPDoc tag @return with type iterable\\<string, Cache\\\\Adapter\\\\Common\\\\PhpCacheItem\\> is not subtype of native type iterable\\.$#"
+            count: 1
+            path: ../src/PhpCachePool.php
